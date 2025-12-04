@@ -10,9 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/Sudo-N1t1n/MyPortfolio-MacOs-/stargazers"><img src="https://img.shields.io/github/stars/Sudo-N1t1n/MyPortfolio-MacOs-?style=social" alt="Stars"></a>
-  <a href="https://github.com/Sudo-N1t1n/MyPortfolio-MacOs-/network/members"><img src="https://img.shields.io/github/forks/Sudo-N1t1n/MyPortfolio-MacOs-?style=social" alt="Forks"></a>
-  <a href="https://github.com/Sudo-N1t1n/MyPortfolio-MacOs-"><img src="https://img.shields.io/github/license/Sudo-N1t1n/MyPortfolio-MacOs-" alt="License"></a>
-</p>
+ 
 
 <p align="center">
   <a href="#-features">Features</a> •
@@ -152,7 +150,7 @@ Each dock icon opens a unique "app" showcasing different portfolio sections:
 
 ## 📬 Contact
 
-**Nitin** - Full Stack Developer
+**Nitin** 
 
 <p>
   <a href="https://github.com/Sudo-N1t1n"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
