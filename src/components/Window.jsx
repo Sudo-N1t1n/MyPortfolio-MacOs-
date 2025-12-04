@@ -98,7 +98,7 @@ const Window = ({ id, title, children, minWidth = 600, minHeight = 400 }) => {
     return (
         <div
             ref={windowRef}
-            className="fixed rounded-xl shadow-2xl border border-zinc-700/50 bg-[#1c1c1e]/90 backdrop-blur-xl flex flex-col"
+            className="fixed rounded-xl shadow-2xl border border-zinc-700/50 bg-[#1c1c1e]/90 backdrop-blur-xl flex flex-col pointer-events-auto"
             style={{
                 left: position.x,
                 top: position.y,

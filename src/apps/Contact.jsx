@@ -7,7 +7,7 @@ const Contact = () => {
         <Window id="contact" title="Contact" minWidth={400} minHeight={500}>
             <div className="w-full h-full bg-[#1c1c1e] flex flex-col items-center justify-center p-8 text-center">
                 <div className="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-zinc-700 shadow-xl">
-                    <img src="/images/adrian.jpg" alt="Profile" className="w-full h-full object-cover" />
+                    <img src="/images/profile.png" alt="Profile" className="w-full h-full object-cover" />
                 </div>
 
                 <h2 className="text-2xl font-bold text-white mb-2">Let's Connect!</h2>
