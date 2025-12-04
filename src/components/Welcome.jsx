@@ -7,7 +7,7 @@ gsap.registerPlugin(useGSAP);
 // Make it overall thicker and with a very small weight range
 const FONT_WEIGHT = {
     subtitle: { min: 320, max: 420, default: 380 },
-    title:    { min: 430, max: 540, default: 500 }, // solid-looking "portfolio"
+    title: { min: 430, max: 540, default: 500 }, // solid-looking "portfolio"
 };
 
 const renderText = (text, className, baseWeight = 400) => {
@@ -20,8 +20,8 @@ const renderText = (text, className, baseWeight = 400) => {
                 fontVariationSettings: `"wght" ${baseWeight}`,
             }}
         >
-      {char === " " ? "\u00A0" : char}
-    </span>
+            {char === " " ? "\u00A0" : char}
+        </span>
     ));
 };
 
@@ -31,13 +31,16 @@ const setupTextHover = (container, type) => {
     const letters = container.querySelectorAll("span");
     const { min, max, default: base } = FONT_WEIGHT[type];
 
-    const animateLetter = (letter, weight, intensity, duration = 0.25) => {
+    const animateLetter = (letter, weight, intensity, duration = 0.5) => {
         gsap.to(letter, {
             duration,
-            ease: "power3.out",
-            fontVariationSettings: `"wght" ${weight.toFixed(0)}`,
-            y: -3 * intensity,             // very subtle lift
-            scale: 1 + 0.04 * intensity,   // gentle scale so nothing gets chopped
+            ease: "power2.out",
+            fontWeight: weight, // Animate standard fontWeight which often maps to wght axis
+            fontVariationSettings: `"wght" ${weight}`, // Explicitly set for variable font support
+            y: -20 * intensity,
+            scale: 1 + 0.2 * intensity,
+            color: intensity > 0.5 ? "white" : "#e5e7eb", // Light up on hover
+            textShadow: intensity > 0.5 ? "0 0 20px rgba(255,255,255,0.5)" : "none",
             transformOrigin: "center bottom",
         });
     };
@@ -52,16 +55,18 @@ const setupTextHover = (container, type) => {
             const dy = e.clientY - letterCenterY;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            const maxEffectDistance = 110;
+            const maxEffectDistance = 150; // Increased range
             const clamped =
                 1 - Math.min(distance, maxEffectDistance) / maxEffectDistance;
 
             const intensity = Math.max(0, clamped); // 0–1
 
-            // Slight, tasteful variation: hover goes a bit *thinner*, but not too much
-            const weight = base - (base - min) * intensity;
+            // Ease the intensity for smoother feel
+            const easedIntensity = gsap.parseEase("power2.out")(intensity);
 
-            animateLetter(letter, weight, intensity);
+            const weight = base - (base - min) * easedIntensity;
+
+            animateLetter(letter, weight, easedIntensity);
         });
     };
 
@@ -104,9 +109,9 @@ const Welcome = () => {
 
     return (
         <section id="welcome" className="px-8 py-16 overflow-visible">
-            <p ref={subtitleRef}>
+            <p ref={subtitleRef} className="text-center">
                 {renderText(
-                    "Hey! Nitin here, welcome to my",
+                    "Hey Nitin Here welcome to my",
                     "text-3xl font-georama",
                     FONT_WEIGHT.subtitle.default
                 )}
@@ -114,7 +119,7 @@ const Welcome = () => {
 
             <h1
                 ref={titleRef}
-                className="mt-7 leading-none overflow-visible"
+                className="mt-7 leading-none overflow-visible text-center"
             >
                 {renderText(
                     "portfolio",
