@@ -5,7 +5,7 @@
 <h1 align="center">Nitin's macOS Portfolio</h1>
 
 <p align="center">
-  <strong>A stunning interactive portfolio website designed to look and feel like macOS</strong>
+  <strong>A stunning interactive portfolio website designed to look and feel like macOS [Under Devalopement still waiting to finish]</strong>
 </p>
 
 <p align="center">
