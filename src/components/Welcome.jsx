@@ -111,7 +111,7 @@ const Welcome = () => {
         <section id="welcome" className="px-8 py-16 overflow-visible">
             <p ref={subtitleRef} className="text-center">
                 {renderText(
-                    "Hey Nitin Here welcome to my",
+                    "Nitin here, Welcome to my",
                     "text-3xl font-georama",
                     FONT_WEIGHT.subtitle.default
                 )}

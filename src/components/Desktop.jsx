@@ -42,7 +42,7 @@ const Desktop = () => {
             </div>
 
             {/* Windows Container (pointer-events-auto handled by windows) */}
-            <div className="absolute inset-0 pointer-events-auto z-20 overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden">
                 <Finder />
                 <Safari />
                 <Photos />

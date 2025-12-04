@@ -8,6 +8,9 @@
   <strong>A stunning interactive portfolio website designed to look and feel like macOS [Under Devalopement still waiting to finish]</strong>
 </p>
 
+> [!WARNING]
+> **This project is currently under active development.** Features may be incomplete or unstable.
+
 <p align="center">
   <a href="https://github.com/Sudo-N1t1n/MyPortfolio-MacOs-/stargazers"><img src="https://img.shields.io/github/stars/Sudo-N1t1n/MyPortfolio-MacOs-?style=social" alt="Stars"></a>
  
